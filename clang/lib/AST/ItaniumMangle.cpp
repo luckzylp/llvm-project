@@ -4729,7 +4729,7 @@ void CXXNameMangler::mangleType(const HLSLInlineSpirvType *T) {
       llvm_unreachable("Invalid SpirvOperand kind");
       break;
     }
-    TypeNameOS << Operand.getKind();
+    TypeNameOS << static_cast<int>(Operand.getKind());
   }
 }
 
